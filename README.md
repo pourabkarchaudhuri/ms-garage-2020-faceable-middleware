@@ -44,7 +44,7 @@ $ cd ms-garage-2020-faceable-middleware
 #### 4). the `config.env` file with the relevant keys from resources created earlier above
 `STORAGE_ACCOUNT_URL` example :` https://{STORAGE_ACCOUNT_NAME}.blob.core.windows.net` 
 
-`CORE_API_URL` example : `https://{COSMSOS_DB_ACCOUNT_NAME}.documents.azure.com:443` 
+`COSMOS_DB_URL` example : `https://{COSMSOS_DB_ACCOUNT_NAME}.documents.azure.com:443` 
 
 `FACE_API_ENDPOINT` example : `https://{REGION}.api.cognitive.microsoft.com/face/v1.0`
 
