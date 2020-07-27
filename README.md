@@ -13,10 +13,10 @@ This repository contains the source code for the API middleware service for the 
 The following are the list of Azure Cloud Services required:
 - 1 Azure Storage account (`Storagev2, Hot Tier`) resource
 Create these following containers under your Azure storage account and name that container as:
-  - events
-  - faceartifacts
-  - emailimages
-  - hrms
+  - events (Container level access)
+  - faceartifacts (Private)
+  - emailimages (Container level access)
+  - hrms (Private)
  
 - 1 Azure Cosmos DB (`Core SQL API`) resource
 Create the following collections inside this DB.
