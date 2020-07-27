@@ -42,7 +42,7 @@ $ git clone https://github.com/pourabkarchaudhuri/ms-garage-2020-faceable-middle
 $ cd ms-garage-2020-faceable-middleware
 ````
 #### 4). the `config.env.env` file with the relevant keys from resources created earlier above
-`BLOB_URL` example :` https://{STORAGE_ACCOUNT_NAME}.blob.core.windows.net/events` 
+`STORAGE_ACCOUNT_URL` example :` https://{STORAGE_ACCOUNT_NAME}.blob.core.windows.net` 
 
 `CORE_API_URL` example : `https://{COSMSOS_DB_ACCOUNT_NAME}.documents.azure.com:443` 
 
