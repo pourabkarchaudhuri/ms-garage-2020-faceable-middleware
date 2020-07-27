@@ -1,0 +1,256 @@
+[
+    {
+	"_id" : "ObjectId('5ea00f233928dc35589f9a44')",
+	"eventType" : "enteredgeofence",
+	"channels" : [
+		{
+			"_id" : "ObjectId('5ea012a71b72363898bd075d')",
+			"channelType" : "SMS",
+			"to" : "personPhone",
+			"subject" : "",
+			"message" : "Hi ${personName}, you have entered the geofence"
+		},
+		{
+			"_id" : "ObjectId('5ea01b621b72363898bd075e')",
+			"channelType" : "Email",
+			"to" : "personemailAddress",
+			"subject" : "You have entered geofence",
+			"message" : "Hi ${personName}, you have entered the geofence"
+		}
+	],
+	"__v" : 0
+},
+
+{
+	"_id" : "ObjectId('5ea02af59308b43814eff221')",
+	"eventType" : "reenteredgeofence",
+	"channels" : [
+		{
+			"_id" : "ObjectId('5ea02b569308b43814eff222')",
+			"channelType" : "SMS",
+			"to" : "personPhone",
+			"subject" : "",
+			"message" : "Hi ${personName}, Thank you for re-entering your home. You will be contacted by the authorities soon. Please do not breach so as to keep yourself and others around you safe."
+		},
+		{
+			"_id" : "ObjectId('5ea02b9c9308b43814eff223')",
+			"channelType" : "Voice",
+			"to" : "personPhone",
+			"subject" : "",
+			"message" : "Hi+${personName},+you+have+re-entered+the+geofence"
+		}
+	],
+	"__v" : 0
+},
+{
+	"_id" : "ObjectId('5ea02bed9308b43814eff224')",
+	"eventType" : "breachgeofence",
+	"channels" : [
+		{
+			"_id" : "ObjectId('5ea02c8e9308b43814eff225')",
+			"channelType" : "SMS",
+			"to" : "personPhone",
+			"subject" : "Geofence Breached",
+			"message" : "Hi ${personName}, you have breached geofence. Please go back and do not breach so as to keep yourself and others around you safe."
+		},
+		{
+			"_id" : "ObjectId('5ea02cf99308b43814eff226')",
+			"channelType" : "SMS",
+			"to" : "enforcerprimarycontactPhone",
+			"subject" : "Geofence Breached by the person ${personName}",
+			"message" : "Hi ${enforcerprimarycontactName}, the person ${personName} has breached geofence."
+		},
+		{
+			"_id" : "ObjectId('5ea02d059308b43814eff227')",
+			"channelType" : "Voice",
+			"to" : "enforcerprimarycontactPhone",
+			"subject" : "",
+			"message" : "Hi+Admin,+${personName}+has+breached+the+geofence"
+		},
+		{
+			"_id" : "ObjectId('5ea02d1c9308b43814eff228')",
+			"channelType" : "Voice",
+			"to" : "personPhone",
+			"subject" : "",
+			"message" : "Hi+${personName},+you+have+breached+the+geofence"
+		}
+	],
+	"__v" : 0
+},
+{
+	"_id" : "ObjectId('5ea02def9308b43814eff229')",
+	"eventType" : "healthparamcritical",
+	"channels" : [
+		{
+			"_id" : "ObjectId('5eb10d2155faca3f38527d4b')",
+			"channelType" : "SMS",
+			"to" : "personPhone",
+			"subject" : "",
+			"message" : "Hi ${personName}, you have updated the major symptoms during health parameter check, please contact hospital for further details and stay home."
+		},
+		{
+			"_id" : "ObjectId('5eb10d2f55faca3f38527d4c')",
+			"channelType" : "Voice",
+			"to" : "personPhone",
+			"subject" : "",
+			"message" : "Hi+${personName},+you+have+updated+the+major+symptoms+during+health+parameter+check,+please+contact+hospital+for+further+details+and+stay+home"
+		},
+		{
+			"_id" : "ObjectId('5eb10d8755faca3f38527d4d')",
+			"channelType" : "SMS",
+			"to" : "enforcerprimarycontactPhone",
+			"subject" : "",
+			"message" : "Hi admin, ${personName} has updated the major symptoms during health parameter check, please contact the person and get its test done"
+		},
+		{
+			"_id" : "ObjectId('5eb10d8e55faca3f38527d4e')",
+			"channelType" : "Voice",
+			"to" : "enforcerprimarycontactPhone",
+			"subject" : "",
+			"message" : "Hi+admin,+${personName}+has+updated+the+major+symptoms+during+health+parameter+check,+please+contact+the+person+and+get+its+test+done"
+		}
+	],
+	"__v" : 0
+},
+{
+	"_id" : "ObjectId('5ea98e352d6fa9203039e8b8')",
+	"eventType" : "notactivatedcritical",
+	"channels" : [
+		{
+			"_id" : "ObjectId('5ea98e8f2d6fa9203039e8ba')",
+			"channelType" : "Voice",
+			"to" : "personPhone",
+			"subject" : "",
+			"message" : ": Hi+${personName}+,+you+have+not+activated+the+app+for+more+than+24+hours+after+registering.+Please+activate+your+app"
+		},
+		{
+			"_id" : "ObjectId('5ea98eb02d6fa9203039e8bb')",
+			"channelType" : "Email",
+			"to" : "personemailAddress",
+			"subject" : "Not activated the app for more than 24 hours after registering",
+			"message" : ": Hi ${personName} , you have not activated the app for more than 24 hours after registering.  Please activate your app"
+		},
+		{
+			"_id" : "ObjectId('5ea98eef2d6fa9203039e8bd')",
+			"channelType" : "Voice",
+			"to" : "enforcerprimarycontactPhone",
+			"subject" : "",
+			"message" : "Hi+admin,+${personName}+has+not+activated+the+app+for+more+than+24+hours+after+registering."
+		},
+		{
+			"_id" : "ObjectId('5ea98f232d6fa9203039e8be')",
+			"channelType" : "Email",
+			"to" : "enforcerprimarycontactemailAddress",
+			"subject" : "Not activated the app for more than 24 hours after registering",
+			"message" : "Hi admin, ${personName} has not activated the app for more than 24 hours after registering. "
+		}
+	],
+	"__v" : 0
+},
+{
+	"_id" : "ObjectId('5ea03cdf9308b43814eff23d')",
+	"eventType" : "notupdatedhealthparamintermediate",
+	"channels" : [
+		{
+			"_id" : "ObjectId('5ea03ce69308b43814eff23e')",
+			"channelType" : "SMS",
+			"to" : "personPhone",
+			"subject" : "",
+			"message" : "Hi ${personName} ,you have not updated health check for more than 2 hours after scheduling.  Please update your health check status in the app"
+		},
+		{
+			"_id" : "ObjectId('5ebbec785e795b0cc848ef72')",
+			"channelType" : "Email",
+			"to" : "personemailAddress",
+			"subject" : "Not updated Health Status",
+			"message" : "Hi ${personName}, you have not updated health check for more than 2 hours after scheduling. Please update your health check status in the app"
+		}
+	],
+	"__v" : 0
+},
+{
+	"_id" : "ObjectId('5ea98c6e2d6fa9203039e8b1')",
+	"eventType" : "notupdatedhealthparamcritical",
+	"channels" : [
+		{
+			"_id" : "ObjectId('5ea98c872d6fa9203039e8b2')",
+			"channelType" : "Email",
+			"to" : "personemailAddress",
+			"subject" : "Not updated health check for more than 4 hours after scheduling",
+			"message" : "Hi ${personName} ,you have not updated health check for more than 4 hours after scheduling.  Please update your health check status in the app"
+		},
+		{
+			"_id" : "ObjectId('5ea98cbb2d6fa9203039e8b3')",
+			"channelType" : "SMS",
+			"to" : "personPhone",
+			"subject" : "",
+			"message" : "Hi ${personName} ,you have not updated health check for more than 4 hours after scheduling.  Please update your health check status in the app"
+		},
+		{
+			"_id" : "ObjectId('5ea98d482d6fa9203039e8b4')",
+			"channelType" : "Voice",
+			"to" : "personPhone",
+			"subject" : "",
+			"message" : "Hi+${personName},+you+have+not+updated+health+check+for+more+than+4+hours+after+scheduling.+Please+update+your+health+check+status+in+the+app"
+		},
+		{
+			"_id" : "ObjectId('5ea98dd02d6fa9203039e8b5')",
+			"channelType" : "Voice",
+			"to" : "enforcerprimarycontactPhone",
+			"subject" : "",
+			"message" : "Hi+Admin,+${personName}+have+not+updated+his+health+check+for+more+than+4+hours+after+scheduling."
+		},
+		{
+			"_id" : "ObjectId('5ea98ddc2d6fa9203039e8b6')",
+			"channelType" : "SMS",
+			"to" : "enforcerprimarycontactPhone",
+			"subject" : "",
+			"message" : "Hi admin,${personName}  have not updated his health check for more than 4 hours after scheduling."
+		},
+		{
+			"_id" : "ObjectId('5ea98e0c2d6fa9203039e8b7')",
+			"channelType" : "Email",
+			"to" : "enforcerprimarycontactemailAddress",
+			"subject" : "Not updated his health check for more than 4 hours after scheduling",
+			"message" : "Hi admin,${personName}  have not updated his health check for more than 4 hours after scheduling."
+		}
+	],
+	"__v" : 0
+},
+{
+	"_id" : "ObjectId('5ea03ddb9308b43814eff246')",
+	"eventType" : "notsendinglocationcritical",
+	"channels" : [
+		{
+			"_id" : "ObjectId('5ea03df69308b43814eff247')",
+			"channelType" : "Voice",
+			"to" : "enforcerprimarycontactPhone",
+			"subject" : "",
+			"message" : "Hi+admin,+${personName}+location+is+not+available+for+more+than+3+hours"
+		},
+		{
+			"_id" : "ObjectId('5ea03e359308b43814eff249')",
+			"channelType" : "Email",
+			"to" : "enforcerprimarycontactemailAddress",
+			"subject" : "App location is not available for more than 3 hours ",
+			"message" : "Hi admin,${personName}   location is not available for more than 3 hours"
+		},
+		{
+			"_id" : "ObjectId('5ea03e569308b43814eff24a')",
+			"channelType" : "Email",
+			"to" : "personemailAddress",
+			"subject" : "App location is not available for more than 3 hours ",
+			"message" : "Hi ${personName} ,it seems your location is off for more than 3 hours. Please  turn on your location."
+		},
+		{
+			"_id" : "ObjectId('5ea03e919308b43814eff24c')",
+			"channelType" : "Voice",
+			"to" : "personPhone",
+			"subject" : "",
+			"message" : "Hi+${personName},+it+seems+your+location+is+off+for+more+than+3+hours.+Please+turn+on+your+location."
+		}
+	],
+	"__v" : 0
+}
+
+]
