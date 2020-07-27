@@ -49,6 +49,8 @@ $ cd ms-garage-2020-faceable-middleware
 `FACE_API_ENDPOINT` example : `https://{REGION}.api.cognitive.microsoft.com/face/v1.0`
 
 Fill out and tweak the other environment parameters as suited to requirement respectively.
+
+`Keep the JWT settings as is for demo`
 #### 5). Running on local:
 Under the root directory of the cloned project,
 ```bash
