@@ -40,7 +40,8 @@ exports.sendEmail = asyncHandler(async (req, res, next) => {
 
 exports.getWfhRecords = asyncHandler(async (req, res, next) => {
 
-    if (req.query.search != "") {
+    if (req.query.search != "" && req.query.search != undefined) {
+        console.log("s");
         const result = await wfhRecords.getRecordById(req.query.search);
         console.log(result);
 

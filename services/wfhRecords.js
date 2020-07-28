@@ -151,11 +151,10 @@ exports.sendEmail = async (emailDetails) => {
         emailDetails.message = `Employee with empId ${emailDetails.empId} with public IP ${emailDetails.publicIP} has requested to whitelist this current IP address.`
         emailDetails.imageURI = `https://garagestorages.blob.core.windows.net/emailimages/${imageName}.jpeg`;
 
-        emailDetails.approveLink = `http://localhost:3000/app/pages/approvedeny?empid=${emailDetails.empId}&devicename=${emailDetails.hostName}&publicip=${emailDetails.publicIP}&request=approve`;
-        emailDetails.denyLink = `http://localhost:3000/app/pages/approvedeny?empid=${emailDetails.empId}&request=deny`;
+        emailDetails.approveLink = `${process.env.WEBAPP_URL}/app/pages/approvedeny?empid=${emailDetails.empId}&devicename=${emailDetails.hostName}&publicip=${emailDetails.publicIP}&request=approve`;
+        emailDetails.denyLink = `${process.env.WEBAPP_URL}/app/pages/approvedeny?empid=${emailDetails.empId}&request=deny`;
         const body = new Function('const {' + Object.keys(emailDetails).join(',') + '} = this.emailDetails;return `' + rawMessage + '`').call({ emailDetails })
 
-        console.log(body);
         const emailBody = {
             body: body,
             email: employeeExists[0].managerEmail,

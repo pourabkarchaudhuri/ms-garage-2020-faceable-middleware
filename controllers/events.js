@@ -12,7 +12,7 @@ exports.register = asyncHandler(async (req, res, next) => {
 
 exports.getEvents = asyncHandler(async (req, res, next) => {
 
-    if (req.query.search != "") {
+    if (req.query.search != "" && req.query.search != undefined) {
         const result = await eventsServices.getRecordById(req.query.search);
         console.log(result);
 
