@@ -4,6 +4,8 @@ This repository contains the source code for the API middleware service for the 
 
 ## Getting Started
 
+### Quick Reference
+[`API Docs Link`](https://garagemiddleware.docs.apiary.io/)
 ### Prerequisites
 - [Node.JS](https://nodejs.org/en/) - Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine.
 
@@ -68,6 +70,9 @@ $ npm start
 * Install the visual studio code extensions for Azure
 * Select the extension and Sign in with Azure credentials inside the Visual Studio Code editor
 * Select the earlier above provisioned `App Service` Resource and deploy it.
+
+##### API Documentation
+[`API Docs Link`](https://garagemiddleware.docs.apiary.io/)
 
 This is what we have used in the Hackathon. In case if deployment is to be done on a Virtual Machine, then please follow the below steps:
 
