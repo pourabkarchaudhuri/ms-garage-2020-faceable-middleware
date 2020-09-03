@@ -23,20 +23,20 @@ exports.registerEvent = async (eventDetails) => {
     const empId = deviceDetails[0].empId;
 
     // Create a WFH record
-    (async () => {
-        const blobArray = [];
-        for (const image of eventDetails.images) {
-            // Convert base64 to buffer
-            const buff = await dataURIToBuffer(image.image);
-            const imageName = empId + "-" + Date.now();
+    // (async () => {
+    //     const blobArray = [];
+    //     for (const image of eventDetails.images) {
+    //         // Convert base64 to buffer
+    //         const buff = await dataURIToBuffer(image.image);
+    //         const imageName = empId + "-" + Date.now();
 
-            // upload photo to Archieve Blob (buffer, mimetype, filename, containerName)
-            await azureBlob.upload(buff, "img/jpeg", imageName, "events");
-            blobArray.push({
-                imageURL: `${process.env.STORAGE_ACCOUNT_URL}/events/${imageName}.jpeg`,
-                timestamp: image.timestamp
-            })
-        }
+    //         // upload photo to Archieve Blob (buffer, mimetype, filename, containerName)
+    //         await azureBlob.upload(buff, "img/jpeg", imageName, "events");
+    //         blobArray.push({
+    //             imageURL: `${process.env.STORAGE_ACCOUNT_URL}/events/${imageName}.jpeg`,
+    //             timestamp: image.timestamp
+    //         })
+    //     }
         // insert a record to events DB.
         const event = {
             id: String(id),
@@ -45,7 +45,7 @@ exports.registerEvent = async (eventDetails) => {
             DeviceName: eventDetails.hostName,
             macAddress: eventDetails.macAddress,
             publicIP: eventDetails.publicIP,
-            snapshots: blobArray,
+            // snapshots: blobArray,
             location: eventDetails.loc,
             city: eventDetails.city,
             region: eventDetails.region,
@@ -54,7 +54,7 @@ exports.registerEvent = async (eventDetails) => {
         }
 
         await eventsDAO.create(event);
-    })();
+    // })();
 
     return "success";
 
