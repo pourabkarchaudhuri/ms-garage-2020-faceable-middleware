@@ -30,7 +30,9 @@ Create the following collections inside this DB.
   
 - 1 Azure Face API resource
 - 1 Azure Logic App resource
-Download and use `URL_OF_HOSTED_TEMPLATE` template for the Logic App
+Download and use [`ARM_TEMPLATE`](https://raw.githubusercontent.com/pourabkarchaudhuri/ms-garage-2020-faceable-middleware/master/logic_app_ARM_Template/logic_app.json) template for the Logic App
+  - Login with your office365 account after deployment of template
+  - Put the logic app trigger URL in the `config.env` file
 
 We will need the keys and URLs of these services to run this source code. Continue with these steps. How they are used are explained below.
 
