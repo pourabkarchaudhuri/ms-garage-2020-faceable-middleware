@@ -12,7 +12,7 @@
   "dependencies": {
     "@azure/cosmos": "^2.0.2",
     "@azure/storage-blob": "^12.1.1",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "azure-storage": "^2.10.3",
     "bcryptjs": "^2.4.3",
     "bluebird": "^3.7.2",
